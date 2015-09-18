@@ -12,7 +12,7 @@
 		<tr>
 			<th ng-click="sortData($index)" ng-repeat="column in data.cols">{{column}}</th>
 		</tr>
-		<tr ng-repeat="row in data.data | filter : filterData | orderBy: sortFrom : showSort | limitTo: perPage : (page - 1) * perPage">
+		<tr ng-repeat="row in data.data | orderBy: sortFrom : showSort | limitTo: perPage : (page - 1) * perPage">
 			<td ng-repeat="star in row">{{star}}</td>
 		</tr>
 	</table>

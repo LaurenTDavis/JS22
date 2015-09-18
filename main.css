@@ -1,18 +1,24 @@
 .starCraft {
+	background-color: #291550;
+	color: #E1F3FB;
 
 }
 th {
 	background-color: black;
-	color: white;
 	padding: 10px 30px;
+}
+td {
+	padding: 10px;
+	border: 1px solid #76DDE9;
 }
 
 
 button {
-	color: white;
-	background-color: #291550;
 	height: 30px;
 	width: 50px;
+	color: white;
+	background-color:black ;
+
 }
 
 

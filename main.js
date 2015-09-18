@@ -18,13 +18,6 @@ var mainControllerFunc = function($scope, starCraftData) {
 		$scope.sortFrom = column.toString();
 	}
 
-	$scope.filterData = function(race) {
-		if (!$scope.dataFilter) {
-			return true;
-		}
-		return race[3] === $scope.dataFilter; 
-
-	}
 
 	$scope.pagination = function(next) {
 		$scope.page += next;
