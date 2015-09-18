@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>StarCraft</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
+</head>
+<body ng-controller="mainController">
+
+	<table class="starCraft">
+		<tr>
+			<th ng-click="sortData($index)" ng-repeat="column in data.cols">{{column}}</th>
+		</tr>
+		<tr ng-repeat="row in data.data | filter : filterData | orderBy: sortFrom : showSort | limitTo: perPage : (page - 1) * perPage">
+			<td ng-repeat="star in row">{{star}}</td>
+		</tr>
+	</table>
+
+
+
+	<div class="pages">
+		<button ng-click="pagination(-1)">&lt;</button>
+		<button ng-click="pagination(1)">&gt;</button>
+	</div>
+
+	<script src="data.js"></script>
+	<script src="main.js"></script>
+
+</body>
+</html>
